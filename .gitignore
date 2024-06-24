@@ -5,3 +5,4 @@
 /output
 /venv
 /actions/.env
+/actions__pycache__
