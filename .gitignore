@@ -1,0 +1,6 @@
+/.env
+/.rasa
+/input
+/models
+/output
+/venv

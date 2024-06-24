@@ -1,0 +1,31 @@
+version: "3.1"
+
+stories:
+- story: greet path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: provide contact details
+  steps:
+  - intent: provide_contact
+  - action: contact_form
+  - active_loop: contact_form
+  - action: utter_acknowledge_contact
+  - action: action_save_contact
+
+- story: ask contact details
+  steps:
+  - intent: ask_contact_details
+  - action: utter_provide_contact
+
+- story: say goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: upload file
+  steps:
+  - intent: upload_file
+  - action: utter_doc_summarize
+  - action: action_doc_summarize

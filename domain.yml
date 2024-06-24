@@ -1,0 +1,73 @@
+version: "3.1"
+
+intents:
+  - greet
+  - provide_contact
+  - ask_contact_details
+  - inform
+  - goodbye
+  - upload_file
+
+entities:
+  - name
+  - email
+  - phone
+
+slots:
+  name:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: name
+  email:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: email
+  phone:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: phone
+    
+
+responses:
+  utter_greet:
+    - text: "Welcome! Please provide your contact details in order for us to reach out to you"
+
+  utter_goodbye:
+    - text: "Goodbye! Have a great day!"
+    - text: "Thanks for reaching out. Have a great day!"
+
+  utter_ask_name:
+    - text: "Can I have your name, please?"
+
+  utter_ask_email:
+    - text: "Can I have your email, please?"
+
+  utter_ask_phone:
+    - text: "Can I have your phone number, please?"
+
+  utter_provide_contact:
+    - text: "You can reach us at hr@somecompany.com or call me at 123-456-7890."
+
+  utter_acknowledge_contact:
+    - text: "Thank you {name}. I have saved your details. Someone from EM will get back to you shortly."
+
+  utter_request_file_upload:
+    - text: "Please upload your csv document."
+
+  utter_doc_summarize:
+    - text: "Reading your document....."
+
+actions:
+  - action_save_contact
+  - action_doc_summarize
+
+forms:
+  contact_form:
+    required_slots:
+      - name
+      - email
+      - phone
+       

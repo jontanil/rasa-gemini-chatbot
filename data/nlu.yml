@@ -1,0 +1,60 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hi
+    - hello
+    - hey
+    - hey there
+    - good morning
+    - good evening
+    - greetings
+    - hello there
+
+- intent: provide_contact
+  examples: |
+    - My name is [John Doe](name) and my email is [johndoe@example.com](email)
+    - I am [Jane Smith](name). You can reach me at [janesmith@example.com](email)
+    - My phone number is [123-456-7890](phone) and my email is [john.doe@example.com](email)
+    - I am [Jane Smith](name) and my phone number is [123-456-7890](phone)
+    - [john.doe@example.com](email) is my email address
+    - I am [Jane Smith](name), my email is [janesmith@example.com](email) and phone is [123-456-7890](phone)
+    - You can contact me at [jane.smith@example.com](email)
+    - I am [Jane](name)
+    - I'm [john](name)
+
+- intent: inform
+  examples: |
+    - My name is [John Doe](name)
+    - My email is [johndoe@example.com](email)
+    - My phone number is [123-456-7890](phone)
+
+- intent: ask_contact_details
+  examples: |
+    - Can I have your contact details?
+    - Give me your contact information
+    - How can I contact you?
+    - I cannot give you my information
+    - Sorry, I cannot give you my contact details
+    - No
+    - I won't give you my details
+
+- intent: goodbye
+  examples: |
+    - bye
+    - goodbye
+    - see you
+    - thank you
+
+- intent: upload_file
+  examples: |
+    - I want to upload a file
+    - Can I send you a file?
+    - Let me upload a document
+    - I need to share a CSV file
+    - I have uploaded a document
+    - Can I share a file with you?
+    - Summarize this file for me
+    - What is this file?
+    - What are the contents of this file?
